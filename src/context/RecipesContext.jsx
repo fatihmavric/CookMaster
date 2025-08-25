@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { seedRecipes } from "../data/seedRecipes";
+//import { seedRecipes } from "../data/seedRecipes";
 
 export const RecipesContext = createContext();
 
