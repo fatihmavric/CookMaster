@@ -4,19 +4,19 @@ import { seedRecipes } from "../data/seedRecipes";
 export const RecipesContext = createContext();
 
 export const RecipesProvider = ({ children }) => {
-  // State sa svim receptima - inicijalizujemo seed podacima ili iz localStorage
+
   const [recipes, setRecipes] = useState(() => {
     const saved = localStorage.getItem("cookmaster-recipes");
     return saved ? JSON.parse(saved) : /*seedRecipes*/ [];
   });
 
-  // Omiljeni recepti - inicijalno prazno ili iz localStorage
+  
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem("cookmaster-favorites");
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Moji recepti (pretpostavljamo da ćemo kasnije povezati sa korisnikom)
+ 
   const [myRecipes, setMyRecipes] = useState(() => {
     const saved = localStorage.getItem("cookmaster-myrecipes");
     return saved ? JSON.parse(saved) : [];
