@@ -1,0 +1,16 @@
+
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.recipe-list .recipe-card-wrapper {
+  flex: 1 1 320px; /* minimalna širina kartice, raste ako ima prostora */
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}

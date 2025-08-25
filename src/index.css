@@ -1,0 +1,237 @@
+/* Globalno resetovanje i font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background: #faba0b38;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Naslovi */
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Kartice za recepte */
+.recipe-card {
+  background: #7ef893;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Slike recepata */
+.recipe-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Dugmad */
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+button.danger {
+  background: #e74c3c;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}
+
+/* Detalji recepta - dugmad */
+.recipe-details .actions {
+  display: flex;
+  
+  gap: 8px; /* razmak između dugmadi */
+  margin-bottom: 12px;
+}
+
+/* larr backlink */
+.back-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 6px 12px;
+  background-color: #f11111;
+  color: #080808;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background-color: #e0e0e0;
+  color: #0077cc;
+  transform: translateY(-1px);
+}
+
+
+.recipe-details .favorite-btn {
+  font-size: 18px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.recipe-details .favorite-btn.active {
+  color: red;
+  border-color: red;
+}
+
+.recipe-details .favorite-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.recipe-details .edit-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #ff0000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recipe-details .edit-btn:hover {
+  background-color: #8d5e5e;
+}
+
+.recipe-details .delete-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recipe-details .delete-btn:hover {
+  background-color: darkred;
+}
+
+.recipe-details .meta {
+  margin-top: 0;
+  color: #666;
+}
+
+.recipe-details .recipe-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* Forme */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.4);
+}
+
+/* Navbar kontejner */
+.navbar {
+  background: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LINKOVI KONTEJNER */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* POJEDINAČNI LINKOVI */
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* HOVER EFEKAT */
+.nav-links li a:hover {
+  background: #f2f2f2;
+  color: #0077cc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/* Lista kartica recepta */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
